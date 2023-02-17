@@ -11,6 +11,7 @@ export default function Home()
     return (
         <>
         <div className='backdropDiv1'>
+            <div className='eclipseDiv'></div>
             <div className='mainWrapper1'>
 
             <div className='titleContent'>
@@ -30,8 +31,8 @@ export default function Home()
         <div className='mainWrapper2'>
         <div className='binanceDiv'>
                 <img className='binanceDivImg' src={bnbIcon} alt="binance-icon" />
-                <img className='binanceDivImg' src={coinmarketcapIcon} alt="coinmarketcapIcon-icon" />
-                <img className='binanceDivImg' src={pinksaleIcon} alt="pinksaleIcon-icon" />
+                <img className='binanceDivImg coinIcon' src={coinmarketcapIcon} alt="coinmarketcapIcon-icon" />
+                <img className='binanceDivImg pinkIcon' src={pinksaleIcon} alt="pinksaleIcon-icon" />
                 <img className='binanceDivImg' src={bnbIcon} alt="bnbIcon-icon" />
         </div>
         <div className='aboutWrapper'>
@@ -46,6 +47,7 @@ export default function Home()
             </div>
         </div>
         <div className='goalWrapper'>
+            <div className='eclipseDiv'></div>
             <div>
                 <div className='aboutTitle'>The goal is to</div>
                 <div className='aboutMainTxtheading'>Implement a machine learning platform</div>

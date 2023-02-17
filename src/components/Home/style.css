@@ -29,6 +29,14 @@
     backdrop-filter: blur(5px) brightness(0.3);
 }
 
+.eclipseDiv{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    background: rgba(173, 96, 53, 0.46);
+    filter: blur(200px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
 
 .backdropDiv1{
     
@@ -357,37 +365,12 @@ b{
     color: rgba(255, 255, 255, 0.79);
 }
 
-.stakingWrapper{
-    display: flex;
-    align-items: center;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 50px;
-    gap: 50px;
+.pinkIcon{
+    width: 135px;
 }
 
-.stakingImgWrapper{
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.165) 0%, rgba(255, 255, 255, 0.04) 100%);
-    opacity: 0.7;
-    backdrop-filter: blur(15px);
-    padding: 25px;
-    border-radius: 20px;
-}
-
-.styledUnderline{
-    width: 180px;
-    height: 3px;
-    border-radius: 5px;
-    background: linear-gradient(90deg, #FF2887 1.72%, #FF2BD0 33.5%, #C76BFF 64.91%)
-}
-
-.stakingheadingWrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
+.coinIcon{
+    width: 145px;
 }
 
 .headingUnderlineWrapper{
@@ -443,19 +426,24 @@ b{
     color: rgba(255, 255, 255, 0.78);
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 800px) {
     .mainWrapper1{
-        padding: 5px 10px;
+        padding: 5px 20px;
+        flex-direction: column;
+    }
+    .mainWrapper1 img{
+        transform: translateX(15px);
     }
     .mainWrapper2{
-        padding: 5px 10px;
+        padding: 5px 20px;
     }
     .titleContent{
+        margin-bottom: 5em;
         padding: 0.5em 1em;
     }
     .mainHeadingTxt{
-        font-size: 36px;
-        line-height: 45px;
+        font-size: 45px;
+        line-height: 50px;
     }
     .howItWorksSection{
         padding: 0.5em 1em;
@@ -467,9 +455,9 @@ b{
     }
     .tokenomicsWrapper{
         display: flex;
-        flex-direction: column-reverse;
-        padding: 0.5em 1em;
-        margin: 5em 0;
+        flex-direction: column;
+        margin: 0em 0 8em 0;
+        gap: 40px;
     }
     .tokenomicsTxt{
         font-size: 1.75rem;
@@ -483,7 +471,8 @@ b{
         line-height: 40px;
     }
     .tokenomicsInfoTxt{
-        max-width: 80%;
+        font-size: 1rem;
+        line-height: 1.5rem;
     }
     .optionColoredDivs{
         width: 15px;
@@ -509,15 +498,38 @@ b{
         font-size: 1.75rem;
         line-height: 40px;
     }
-    .stakingWrapper{
+    .aboutDiv{
+        display: flex;
         flex-direction: column;
-        margin-bottom: 2em;
+        gap: 15px;
+        justify-content: center;
+        max-width: 700px;
+        transform: translateX(-33px);
     }
-    .stakingHeading{
-        font-size: 1.75rem;
-        line-height: 40px;
+    .aboutTitle{
+        font-size: 15px;
+    }
+    .aboutMainTxtheading{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .aboutMainTxt1{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .aboutMainTxt2{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .aboutWrapper img{
+        max-width: 58%;
+        transform: translateX(-15px);
     }
     .binanceDiv {
+        margin: 5em 0;
+        display: grid;
+        gap: 35px;
+        margin-bottom: 5em;
         grid-template-columns: repeat(2, 1fr); /* 2 columns in small screen */
         grid-template-rows: repeat(2, 1fr); /* 2 rows in small screen */
       }

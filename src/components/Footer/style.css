@@ -22,6 +22,6 @@
         font-size: 0.6rem;
     }
     .Footer img{
-        width: 50px;
+        transform: scale(0.8);
     }
 }
