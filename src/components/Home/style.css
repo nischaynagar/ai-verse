@@ -504,7 +504,7 @@ b{
         gap: 15px;
         justify-content: center;
         max-width: 700px;
-        transform: translateX(-33px);
+        transform: translateX(-15px);
     }
     .aboutTitle{
         font-size: 15px;
