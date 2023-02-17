@@ -4,6 +4,7 @@ import {ReactComponent as Menu} from '../assests/images/icon-hamburger.svg'
 import {ReactComponent as CloseIcon} from '../assests/images/icon-close.svg';
 import Logo from "../assests/images/Logo.svg";
 
+
 export default function Navbar(props) {
   const [menu, setmenu] = useState(false);
   const myNav = useRef();
@@ -36,6 +37,11 @@ export default function Navbar(props) {
     primaryHeader.toggleAttribute("data-overlay");  
   }
   
+  const handleClick = (event, id) => {
+    event.preventDefault();
+    const element = document.getElementById(id);
+    element.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <>
@@ -58,9 +64,21 @@ export default function Navbar(props) {
             </button>}
             <nav className="primary-navigation">
               <ul className="nav-list" aria-label="Primary" id="primary-navigation" ref={myList}>
-                <li>Home</li>
-                <li>About us</li>
-                <li>Tokenomics</li>
+                <li>
+                  <a href="#home"  onClick={(e) => handleClick(e, "home")}>
+                    Home
+                  </a>
+                </li>
+                <li>
+                    <a href="#about"  onClick={(e) => handleClick(e, "about")}>
+                      About us
+                    </a>
+                  </li>
+                <li>
+                  <a href="#tokenomics"  onClick={(e) => handleClick(e, "tokenomics")}>
+                    Tokenomics
+                  </a>
+                </li>
                 <li className='toggleDisplay'><div  className="button">Dapps</div></li>
               </ul>
             </nav>

@@ -4,4 +4,11 @@
   display: flex;
   flex-direction: column;
   background: #00000A;
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+  outline: none;
+  color: white;
 }

@@ -12,7 +12,7 @@ export default function Home()
         <>
         <div className='backdropDiv1'>
             <div className='eclipseDiv'></div>
-            <div className='mainWrapper1'>
+            <div id="home"  className='mainWrapper1'>
 
             <div className='titleContent'>
                 <div>
@@ -35,7 +35,7 @@ export default function Home()
                 <img className='binanceDivImg pinkIcon' src={pinksaleIcon} alt="pinksaleIcon-icon" />
                 <img className='binanceDivImg' src={bnbIcon} alt="bnbIcon-icon" />
         </div>
-        <div className='aboutWrapper'>
+        <div id='about' className='aboutWrapper'>
             <img src={aiImg2} alt="ai-img"/>
             <div className='aboutDiv'>
                 <div>
@@ -55,7 +55,7 @@ export default function Home()
             <div className='aboutMainTxt1'>That allows users to post tasks on the platform, submit models, make inferences by invoking smart contracts, and create their own AI DApps</div>
             <div className='aboutMainTxt2'>Artificial intelligence decentralized applications are expected to go live in June</div>
         </div>
-            <div className='tokenomicsWrapper'>
+            <div id='tokenomics' className='tokenomicsWrapper'>
                 <div className='tokenomics'>
                 <div className='tokenomicsFeatures'>
                     <div className='headingUnderlineWrapper'>
