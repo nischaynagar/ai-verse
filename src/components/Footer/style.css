@@ -1,0 +1,27 @@
+.Footer{
+    display: flex;
+    align-items: center;
+    padding: 2em 10%;
+    background: #000000;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    gap: 10px;
+}
+
+.Footer img{
+    width: 150px;
+    cursor: pointer;
+}
+
+@media  only screen and (max-width: 650px)
+{
+    .Footer{
+        font-size: 0.6rem;
+    }
+    .Footer img{
+        width: 50px;
+    }
+}
