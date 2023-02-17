@@ -49,7 +49,9 @@ export default function Navbar(props) {
         <div className="container mobile-width">
           <div className="nav-wrapper" id='nav-wrapper' ref={myNav}>
             <div className="logo" ref={myLogo}>
-              <img src={Logo} alt="Manage" />
+              <a href="#home"  onClick={(e) => handleClick(e, "home")}>
+                <img src={Logo} alt="Manage" />
+              </a>
             </div>
             {menu?<button onClick={toggleIcon} className="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
               
