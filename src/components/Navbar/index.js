@@ -81,10 +81,10 @@ export default function Navbar(props) {
                     Tokenomics
                   </a>
                 </li>
-                <li className='toggleDisplay'><div  className="button">Dapps</div></li>
+                <li className='toggleDisplay'><div  className="button">Dapp</div></li>
               </ul>
             </nav>
-            <div  className="button display-sm-hidden display-md-inline-flex">Dapps</div>
+            <div  className="button display-sm-hidden display-md-inline-flex">Dapp</div>
           </div>
         </div>
       </header>

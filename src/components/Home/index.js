@@ -3,11 +3,46 @@ import chart from "../assests/images/icon-chart.svg" ;
 import bnbIcon from "../assests/images/icon-bnb.svg";
 import pinksaleIcon from "../assests/images/icon-pinksale.svg";
 import coinmarketcapIcon from "../assests/images/icon-coinmarketcap.svg";
+import coingeckoIcon from "../assests/images/icon-coingecko.svg";
+import pancakeswapIcon from "../assests/images/icon-pancakeswap.svg";
+import coinsultIcon from "../assests/images/icon-coinsult.svg";
 import aiImg1 from "../assests/images/icon-ai-img1.svg";
 import aiImg2 from "../assests/images/icon-ai-img2.svg";
 import "./style.css";
+
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+
+
 export default function Home()
 {
+
+    const handleDragStart = (e) => e.preventDefault();
+
+    const items = [
+        <img src={bnbIcon} className="bnbIcon" alt= "binance-icon" onDragStart={handleDragStart} />,
+        <img src={pinksaleIcon} alt = "pinksale-icon" onDragStart={handleDragStart} />,
+        <img src={coinmarketcapIcon} className="coinmarketcapIcon" alt = "coinmarketcap-icon"  onDragStart={handleDragStart} />,
+        <img src={coingeckoIcon} alt = "coingecko-icon" onDragStart={handleDragStart} />,
+        <img src={pancakeswapIcon} className="pancakeswapIcon" alt = "pancakeswap-icon" onDragStart={handleDragStart} />,
+        <img src={coinsultIcon} className="coinsultIcon" alt = "coinsult-icon" onDragStart={handleDragStart} />
+      ];
+
+   
+    const responsive = {
+        0: { items: 1 },
+        600: { items: 2 },
+        1200: {items : 3},
+        1500: { items: 5 },
+      };
+    
+    const stagePadding = {
+    paddingLeft: 24,
+    paddingRight: 24,
+    };
+
+
+
     return (
         <>
         <div className='backdropDiv1'>
@@ -30,10 +65,25 @@ export default function Home()
         <div className='backdropDiv2'>
         <div className='mainWrapper2'>
         <div className='binanceDiv'>
-                <img className='binanceDivImg' src={bnbIcon} alt="binance-icon" />
-                <img className='binanceDivImg coinIcon' src={coinmarketcapIcon} alt="coinmarketcapIcon-icon" />
-                <img className='binanceDivImg pinkIcon' src={pinksaleIcon} alt="pinksaleIcon-icon" />
-                <img className='binanceDivImg' src={bnbIcon} alt="bnbIcon-icon" />
+        <AliceCarousel
+            items={items}
+            responsive={responsive}
+            autoPlay
+            autoPlayInterval={2000}
+            animationDuration={1000}
+            disableButtonsControls
+            disableDotsControls
+            mouseTracking
+            infinite
+            animationType="fadeout"
+            paddingLeft={24}
+            paddingRight={24}
+            itemPosition="center"
+            stagePadding={{ paddingLeft: 60, paddingRight: 60 }}
+            slideToIndex={0}
+            dotsDisabled
+            buttonsDisabled
+        />
         </div>
         <div id='about' className='aboutWrapper'>
             <img src={aiImg2} alt="ai-img"/>

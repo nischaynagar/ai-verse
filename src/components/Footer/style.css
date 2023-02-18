@@ -1,7 +1,6 @@
 .Footer{
     display: flex;
     align-items: center;
-    padding: 2em 10%;
     background: #000000;
     font-family: 'Open Sans';
     font-style: normal;
@@ -9,6 +8,11 @@
     font-size: 17px;
     line-height: 20px;
     gap: 10px;
+    --max-width: 1680px;
+    --container-padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+    margin-inline: auto;
+    padding: 1em 4em;
 }
 
 .Footer img{

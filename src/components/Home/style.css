@@ -4,11 +4,14 @@
 }
 
 .mainWrapper1{
+    --max-width: 1680px;
+    --container-padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+    margin-inline: auto;
     display: flex;
     justify-content: space-between;
     padding: 2em 4em 7em 4em;
     align-items: center;
-    width: 100%;
     backdrop-filter: brightness(0.5);
 }
 
@@ -20,13 +23,15 @@
 }
 
 .mainWrapper2{
+    --max-width: 1680px;
+    --container-padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    padding: 0em 4em 7em 4em;
-    align-items: center;
-    width: min(var(--max-width), 100% - (var(--container-padding) * 2));
-    backdrop-filter: blur(5px) brightness(0.3);
+    justify-content: space-between;
+    padding: 2em 4em 7em 4em;
+    backdrop-filter: brightness(0.5);
 }
 
 .eclipseDiv{
@@ -140,34 +145,44 @@
     color: rgba(255, 255, 255, 0.79);
 }
 
-.crousel{
-    display: flex;
-    gap: 15px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+
+.alice-carousel__dots {
+    display: none;
 }
 
-.crouselItem{
-    display: flex;
-    height: 288px;
+.alice-carousel__stage-item {
+    margin: 0 16px;
+  }
+  
+.alice-carousel__stage-item:first-child {
+    margin-left: 40px;
+  }
+  
+.alice-carousel__stage-item:last-child {
+    margin-right: 40px;
+  }
+
+.carousel-img {
     width: 100%;
-    max-width: 300px;
-    flex-direction: column;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.165) 0%, rgba(255, 255, 255, 0.04) 100%);
-    opacity: 0.7;
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    justify-content: space-evenly;
-    align-items: center;
-    color: #B1E3FF;
-    font-weight: 700;
-    font-size: 1.2rem;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.crouselItem img{
-    height: 160px;
+.coinsultIcon{
+    margin-left: 50px;
+}
+
+.coinmarketcapIcon{
+    scale: 1.3;
+}
+
+.bnbIcon{
+    margin-top: 5px;
 }
 
 .tokenomics{
@@ -527,30 +542,15 @@ b{
     }
     .binanceDiv {
         margin: 5em 0;
-        display: grid;
         gap: 35px;
         margin-bottom: 5em;
-        grid-template-columns: repeat(2, 1fr); /* 2 columns in small screen */
-        grid-template-rows: repeat(2, 1fr); /* 2 rows in small screen */
-      }
-      .binanceDiv:nth-child(1) {
-        grid-column: 1 / 3; /* span 2 columns */
-        grid-row: 1 / 2; /* first row */
-      }
-      .binanceDiv:nth-child(2) {
-        grid-column: 3 / 5; /* span 2 columns */
-        grid-row: 1 / 2; /* first row */
-      }
-      .binanceDiv:nth-child(3) {
-        grid-column: 1 / 2; /* first column */
-        grid-row: 2 / 3; /* second row */
-      }
-      .binanceDiv:nth-child(4) {
-        grid-column: 2 / 3; /* second column */
-        grid-row: 2 / 3; /* second row */
-      }
+    }
 
-      .binanceDiv img{
+      /* .binanceDiv img{
         max-width: 150px;
-      }
+      } */
+    .carousel-item {
+    margin: 0 5px;
+    }
+    
 }
