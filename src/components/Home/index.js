@@ -49,9 +49,9 @@ export default function Home()
 
     return (
         <>
-        <div className='backdropDiv1'>
+        <div  className='backdropDiv1'>
             <div className='eclipseDiv'></div>
-            <div id="home"  className='mainWrapper1'>
+            <div id="home" className='mainWrapper1'>
 
             <div className='titleContent'>
                 <div>
@@ -103,7 +103,7 @@ export default function Home()
             </div>
         </div>
         <div className='goalWrapper'>
-            <div className='eclipseDiv'></div>
+            {/* <div className='eclipseDiv'></div> */}
             <div>
             <img className='sparkleIcon5' src={sparkleIcon5} alt="sparkle" />
             <img className='sparkleIcon3' src={sparkleIcon3} alt="sparkle" />

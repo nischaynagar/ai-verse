@@ -4,7 +4,7 @@
 }
 
 .mainWrapper1{
-    --max-width: 1680px;
+    --max-width: 1500px;
     --container-padding: 1rem;
     width: min(var(--max-width), 100% - (var(--container-padding) * 2));
     margin-inline: auto;
@@ -23,7 +23,9 @@
 }
 
 .mainWrapper2{
-    --max-width: 1680px;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    --max-width: 1500px;
     --container-padding: 1rem;
     width: min(var(--max-width), 100% - (var(--container-padding) * 2));
     margin-inline: auto;
@@ -37,6 +39,7 @@
 }
 
 .eclipseDiv{
+    z-index: 100;
     width: 350px;
     height: 350px;
     position: absolute;
@@ -94,6 +97,11 @@
     font-size: 17px;
     line-height: 25px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn1:hover{
+    background: linear-gradient(90deg, #FF710A 2.56%, #D82C17 96.94%);
 }
 
 .btn2{
@@ -213,6 +221,7 @@
     width: 100%;
     gap: 20px;
     margin: 10em 0;
+    max-width: 1300px;
 }
 
 .tokenomicsWrapper img{
@@ -302,11 +311,12 @@
 
 .aboutWrapper{
     display: flex;
+    scroll-snap-align: start;
 }
 
 .aboutWrapper img{
     max-width: 50%;
-    transform: translateX(-20%);
+    transform: translateX(-5%);
 }
 
 .aboutDiv{
@@ -315,6 +325,7 @@
     gap: 15px;
     justify-content: center;
     max-width: 700px;
+    scroll-behavior: smooth;
 }
 
 .aboutTitle{

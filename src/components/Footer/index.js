@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from "../assests/images/Logo.svg";
-import discordIcon from "../assests/images/icon-discord.svg";
+import twitterIcon from "../assests/images/icon-twitter.svg";
 import telegramIcon from "../assests/images/icon-telegram.svg";
 import "./style.css";
 
@@ -22,8 +22,12 @@ export default function Footer()
             </a>
             <div className='iconWrapper'>
             <div className='socialIcons'>
-                <img src={discordIcon} alt="discord-icon"/>
-                <img src={telegramIcon} alt="telegram-icon"/>
+                <a href='https://twitter.com/AIverseToken'>
+                    <img src={twitterIcon} alt="twitter-icon"/>
+                </a>
+                <a href='https://t.me/AIverse_global'>
+                    <img src={telegramIcon} alt="telegram-icon"/>
+                </a>
             </div>
             <div className='FooterTxt1'>
                 @2023 AIverse. All Rights Reserved.

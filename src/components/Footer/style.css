@@ -8,7 +8,7 @@
     font-size: 17px;
     line-height: 20px;
     gap: 10px;
-    --max-width: 1680px;
+    --max-width: 1500px;
     --container-padding: 1rem;
     width: min(var(--max-width), 100% - (var(--container-padding) * 2));
     margin-inline: auto;

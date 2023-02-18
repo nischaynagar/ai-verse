@@ -40,7 +40,12 @@ export default function Navbar(props) {
   const handleClick = (event, id) => {
     event.preventDefault();
     const element = document.getElementById(id);
-    element.scrollIntoView({ behavior: 'smooth' });
+    if(id==="home")
+    element.scrollIntoView({ behavior: 'smooth',  block: 'start' });
+    else{
+      element.scrollIntoView({ behavior: 'smooth',  block: 'center' });
+    }
+    
   };
 
   return (
