@@ -6,8 +6,16 @@ import coinmarketcapIcon from "../assests/images/icon-coinmarketcap.svg";
 import coingeckoIcon from "../assests/images/icon-coingecko.svg";
 import pancakeswapIcon from "../assests/images/icon-pancakeswap.svg";
 import coinsultIcon from "../assests/images/icon-coinsult.svg";
+import matrixlabsIcon from "../assests/images/icon-matrixlabs.svg";
 import aiImg1 from "../assests/images/icon-ai-img1.svg";
 import aiImg2 from "../assests/images/icon-ai-img2.svg";
+import aiImg4 from "../assests/images/icon-ai-img4.svg";
+import sparkleIcon1 from "../assests/images/icon-sparkle1.svg";
+import sparkleIcon2 from "../assests/images/icon-sparkle2.svg";
+import sparkleIcon3 from "../assests/images/icon-sparkle3.svg";
+import sparkleIcon4 from "../assests/images/icon-sparkle4.svg";
+import sparkleIcon5 from "../assests/images/icon-sparkle5.svg";
+
 import "./style.css";
 
 import AliceCarousel from "react-alice-carousel";
@@ -24,6 +32,7 @@ export default function Home()
         <img src={pinksaleIcon} alt = "pinksale-icon" onDragStart={handleDragStart} />,
         <img src={coinmarketcapIcon} className="coinmarketcapIcon" alt = "coinmarketcap-icon"  onDragStart={handleDragStart} />,
         <img src={coingeckoIcon} alt = "coingecko-icon" onDragStart={handleDragStart} />,
+        <img src={matrixlabsIcon} className="matrixlabsIcon" alt = "matrixlabs-icon" onDragStart={handleDragStart} />,
         <img src={pancakeswapIcon} className="pancakeswapIcon" alt = "pancakeswap-icon" onDragStart={handleDragStart} />,
         <img src={coinsultIcon} className="coinsultIcon" alt = "coinsult-icon" onDragStart={handleDragStart} />
       ];
@@ -36,11 +45,6 @@ export default function Home()
         1500: { items: 5 },
       };
     
-    const stagePadding = {
-    paddingLeft: 24,
-    paddingRight: 24,
-    };
-
 
 
     return (
@@ -58,6 +62,7 @@ export default function Home()
                 <div className='btn1'>Buy&nbsp;Token</div>
             </div>
             <img src={aiImg1} alt="ai-img"/>
+            <img className='aiImg4' src={aiImg4} alt="ai-img" />
             </div>
         </div>
             
@@ -94,16 +99,20 @@ export default function Home()
                 </div>
                 <div className='aboutMainTxt1'>Artificial intelligence investment advisor which supports on-chain transactions of DeFi products, decentralized AI evaluation of wealth management products, liquidity mining, private, and presale risk Smart evaluation</div>
                 <div className='aboutMainTxt2'>The current test version only supports Bsc, which will be launched in March</div>
+                <img className='sparkleIcon4' src={sparkleIcon4} alt="sparkle" />
             </div>
         </div>
         <div className='goalWrapper'>
             <div className='eclipseDiv'></div>
             <div>
+            <img className='sparkleIcon5' src={sparkleIcon5} alt="sparkle" />
+            <img className='sparkleIcon3' src={sparkleIcon3} alt="sparkle" />
                 <div className='aboutTitle'>The goal is to</div>
                 <div className='aboutMainTxtheading'>Implement a machine learning platform</div>
             </div>
             <div className='aboutMainTxt1'>That allows users to post tasks on the platform, submit models, make inferences by invoking smart contracts, and create their own AI DApps</div>
             <div className='aboutMainTxt2'>Artificial intelligence decentralized applications are expected to go live in June</div>
+            <img className='sparkleIcon2' src={sparkleIcon2} alt="sparkle" />
         </div>
             <div id='tokenomics' className='tokenomicsWrapper'>
                 <div className='tokenomics'>
@@ -112,14 +121,17 @@ export default function Home()
                         <div className='tokenomicsTxt'>Tokenomics</div>
                     </div>
                     <div className='tokenomicsInfoTxt'>
-                        <div>Token name: <span className='highlightedTxt'>AIverse</span></div>
-                        <div>- Ticker Symbol: <b>$AIV</b></div>
-                        <div>- Blockchain: <b>Binance Smart Chain (BEP-20)</b></div>
-                        <div>- Total Supply: <b>100 Million (100,000,000)</b></div>
-                        <div>- Token tax: <b>0% Tax</b></div>
+                        <div>Token name: <span className='highlightedTxt'>&nbsp;&nbsp;&nbsp;AIverse</span></div>
+                        <ul className='list'>
+                            <li>Ticker Symbol: <b>$AIV</b></li>
+                            <li>Blockchain: <b>Binance Smart Chain (BEP-20)</b></li>
+                            <li>Total Supply: <b>100 Million (100,000,000)</b></li>
+                            <li>Token tax: <b>0% Tax</b></li>
+                        </ul>
                     </div>
+                    <img className='sparkleIcon1' src={sparkleIcon1} alt="sparkle" />
                 </div>
-                <div className='optionsGrid'>
+                {/* <div className='optionsGrid'>
                     <div className='gridCol'>
                         <div className='option'>
                             <div className='optionColoredDivs optionColorDiv1'></div>
@@ -160,7 +172,7 @@ export default function Home()
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 </div>
                 <img src={chart} alt="chart"/>
             </div>

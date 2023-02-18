@@ -27,8 +27,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 30px;
+  border-radius: 15px;
   background-color: black;
+  border: 0.5px solid #DF3914;
 }
 
 .mobile-nav-toggle {
@@ -48,6 +49,10 @@
 .nav-list{
   color: white;
   cursor: pointer;
+}
+
+.nav-list li{
+  font-weight: 700;
 }
 
 .logo{
@@ -87,6 +92,7 @@ display: none;
     width: 100% !important;
   }
   .nav-wrapper{
+    border: none;
     border-radius: 0;
     padding: 0.5em 1em;
   }

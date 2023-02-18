@@ -12,3 +12,7 @@ a{
   outline: none;
   color: white;
 }
+
+a:hover{
+  color: #D82D18;
+}

@@ -10,7 +10,7 @@
     margin-inline: auto;
     display: flex;
     justify-content: space-between;
-    padding: 2em 4em 7em 4em;
+    padding: 2em 4em 0em 4em;
     align-items: center;
     backdrop-filter: brightness(0.5);
 }
@@ -32,6 +32,8 @@
     justify-content: space-between;
     padding: 2em 4em 7em 4em;
     backdrop-filter: brightness(0.5);
+    gap: 100px;
+    overflow: hidden;
 }
 
 .eclipseDiv{
@@ -84,7 +86,7 @@
 .btn1{
     background: linear-gradient(90deg, #D82C17 2.56%, #FF710A 92.24%);
     border-radius: 10px;
-    padding: 12px 28px;
+    padding: 12px 50px;
     width: fit-content;
     font-family: 'Open Sans';
     font-style: normal;
@@ -145,6 +147,19 @@
     color: rgba(255, 255, 255, 0.79);
 }
 
+.aiImg4{
+    width: 70px !important;
+    height: 70px !important;
+    position: absolute;
+    right: 0;
+    transform: translateY(200px);
+    min-width: 0 !important;
+}
+
+.list{
+    list-style: disc;
+    padding: 15px 20px;
+}
 
 .alice-carousel__dots {
     display: none;
@@ -196,7 +211,6 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1000px;
     gap: 20px;
     margin: 10em 0;
 }
@@ -292,7 +306,7 @@
 
 .aboutWrapper img{
     max-width: 50%;
-    transform: translateX(-70px);
+    transform: translateX(-20%);
 }
 
 .aboutDiv{
@@ -357,6 +371,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 200px;
 }
 
 b{
@@ -439,6 +454,48 @@ b{
     font-size: 1.2rem;
     line-height: 1.75rem;
     color: rgba(255, 255, 255, 0.78);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.23) 0%, rgba(255, 255, 255, 0.08) 100%, rgba(255, 255, 255, 0.08) 100%);
+    backdrop-filter: blur(9.5px);
+    border-radius: 20px;
+    padding: 35px;
+}
+
+.sparkleIcon1{
+    position: absolute;
+    width: 130px !important;
+    height: 130px !important;
+    min-width: 0 !important;
+    transform: translate(350%, 180%) !important;
+}
+
+.sparkleIcon2{
+    position: absolute;
+    transform: translate(600%, 250%);
+}
+
+.sparkleIcon3{
+    position: absolute;
+    transform: translate(700%, -60%);
+    width: 169px;
+    height: 100px;
+}
+
+.sparkleIcon4{
+    width: 45px;
+    height: 36px;
+    transform: translate(1000%, 100%) !important;
+}
+
+.sparkleIcon5{
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    transform: translateY(-500%);
+    right: 0;
+}
+
+.matrixlabsIcon{
+    margin-top: 10px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -447,13 +504,14 @@ b{
         flex-direction: column;
     }
     .mainWrapper1 img{
-        transform: translateX(15px);
+        transform: translate(70px, -30px);
     }
     .mainWrapper2{
-        padding: 5px 20px;
+        padding: 5px 30px;
+        gap: 0;
     }
     .titleContent{
-        margin-bottom: 5em;
+        margin-bottom: 0;
         padding: 0.5em 1em;
     }
     .mainHeadingTxt{
@@ -471,7 +529,7 @@ b{
     .tokenomicsWrapper{
         display: flex;
         flex-direction: column;
-        margin: 0em 0 8em 0;
+        margin: 100px 0 8em 0;
         gap: 40px;
     }
     .tokenomicsTxt{
@@ -488,6 +546,9 @@ b{
     .tokenomicsInfoTxt{
         font-size: 1rem;
         line-height: 1.5rem;
+        background: none;
+        padding: 0;
+        backdrop-filter: none;
     }
     .optionColoredDivs{
         width: 15px;
@@ -537,8 +598,8 @@ b{
         line-height: 18px;
     }
     .aboutWrapper img{
-        max-width: 58%;
-        transform: translateX(-15px);
+        max-width: 100%;
+        transform: translateX(-10%);
     }
     .binanceDiv {
         margin: 5em 0;
@@ -553,4 +614,27 @@ b{
     margin: 0 5px;
     }
     
+    .goalWrapper{
+        margin-top: 100px;
+    }
+
+    .aboutWrapper{
+        gap: 20px;
+        flex-direction: column-reverse;
+    }
+    .sparkleIcon1{
+        display: none;
+    }
+    .sparkleIcon2{
+        display: none;
+    }
+    .sparkleIcon3{
+        display: none;
+    }
+    .sparkleIcon4{
+        display: none;
+    }
+    .sparkleIcon5{
+        display: none;
+    }
 }
