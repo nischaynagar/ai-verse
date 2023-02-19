@@ -195,56 +195,55 @@ export default function Home() {
                 <div className="headingUnderlineWrapper">
                   <div className="tokenomicsTxt">Tokenomics</div>
                 </div>
-                <div className="tokenomicsInfoTxt">
-                  <div>
-                    Token name:{" "}
-                    <span className="highlightedTxt">
-                      &nbsp;&nbsp;&nbsp;AIverse
-                    </span>
+                <div className="tokenomics-boxes">
+                  <div className="tokenomics-box">
+                    <p>Ticker Symbol</p>
+                    <h1>$AIV</h1>
                   </div>
-                  <ul className="list">
-                    <li>
-                      Ticker Symbol: <b>$AIV</b>
-                    </li>
-                    <li>
-                      Blockchain: <b>Binance Smart Chain (BEP-20)</b>
-                    </li>
-                    <li>
-                      Total Supply: <b>100 Million (100,000,000)</b>
-                    </li>
-                    <li>
-                      Token tax: <b>0% Tax</b>
-                    </li>
-                  </ul>
+                  <div className="tokenomics-box">
+                    <p>Blockchain</p>
+                    <h1>Binance Smart Chain (BEP-20)</h1>
+                  </div>
+                  <div className="tokenomics-box">
+                    <p>Total Supply </p>
+                    <h1>100 Million (100,000,000)</h1>
+                  </div>
+                  <div className="tokenomics-box">
+                    <p>Token tax</p>
+                    <h1>0% Tax</h1>
+                  </div>
                 </div>
-                <img
+                {/* <img
                   className="sparkleIcon1"
                   src={sparkleIcon1}
                   alt="sparkle"
-                />
+                /> */}
               </div>
             </div>
             {/* <img src={chart} alt="chart" /> */}
             <div className="progress-bar">
               <div className="progress-bar-container">
-                <CircularProgressBar
-                  percentage={23}
-                  circleWidth={"150"}
-                  color="#EF5410"
-                  className="loader"
-                />
+                <div className="loader">
+                  <CircularProgressBar
+                    percentage={23}
+                    circleWidth={"150"}
+                    color="#EF5410"
+                  />
+                </div>
                 <div>
                   <h1>Liquidity</h1>
                   <p></p>
                 </div>
               </div>
               <div className="progress-bar-container">
-                <CircularProgressBar
-                  percentage={10}
-                  circleWidth={"150"}
-                  color="#ff710a"
-                  className="loader"
-                />
+                <div className="loader">
+                  <CircularProgressBar
+                    percentage={10}
+                    circleWidth={"150"}
+                    color="#ff710a"
+                    className="loader"
+                  />
+                </div>
                 <div>
                   <h1>Staking Reward</h1>
                   <p>
@@ -253,12 +252,14 @@ export default function Home() {
                 </div>
               </div>
               <div className="progress-bar-container">
-                <CircularProgressBar
-                  percentage={10}
-                  circleWidth={"150"}
-                  color="#ff9d0a"
-                  className="loader"
-                />
+                <div className="loader">
+                  <CircularProgressBar
+                    percentage={10}
+                    circleWidth={"150"}
+                    color="#ff9d0a"
+                    className="loader"
+                  />
+                </div>
                 <div>
                   <h1>CEX Listing Tokens</h1>
                   <p>
@@ -267,12 +268,14 @@ export default function Home() {
                 </div>
               </div>
               <div className="progress-bar-container">
-                <CircularProgressBar
-                  percentage={10}
-                  circleWidth={"150"}
-                  color="#ffba0a"
-                  className="loader"
-                />
+                <div className="loader">
+                  <CircularProgressBar
+                    percentage={10}
+                    circleWidth={"150"}
+                    color="#ffba0a"
+                    className="loader"
+                  />
+                </div>
                 <div>
                   <h1>Al Development Reserve</h1>
                   <p>
@@ -281,12 +284,14 @@ export default function Home() {
                 </div>
               </div>
               <div className="progress-bar-container">
-                <CircularProgressBar
-                  percentage={5}
-                  circleWidth={"150"}
-                  color="white"
-                  className="loader"
-                />
+                <div className="loader">
+                  <CircularProgressBar
+                    percentage={5}
+                    circleWidth={"150"}
+                    color="white"
+                    className="loader"
+                  />
+                </div>
                 <div>
                   <h1>Team</h1>
                   <p>
@@ -295,12 +300,14 @@ export default function Home() {
                 </div>
               </div>
               <div className="progress-bar-container">
-                <CircularProgressBar
-                  percentage={41}
-                  circleWidth={"150"}
-                  color="#d82d18"
-                  className="loader"
-                />
+                <div className="loader">
+                  <CircularProgressBar
+                    percentage={41}
+                    circleWidth={"150"}
+                    color="#d82d18"
+                    className="loader"
+                  />
+                </div>
                 <div>
                   <h1>Fair Launch Tokens</h1>
                   <p></p>
