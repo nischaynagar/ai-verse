@@ -20,6 +20,7 @@ import "./style.css";
 
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import CircularProgressBar from "../CircularProgressBar";
 
 export default function Home() {
   const handleDragStart = (e) => e.preventDefault();
@@ -222,50 +223,90 @@ export default function Home() {
                   alt="sparkle"
                 />
               </div>
-              {/* <div className='optionsGrid'>
-                    <div className='gridCol'>
-                        <div className='option'>
-                            <div className='optionColoredDivs optionColorDiv1'></div>
-                            <div>Fair Launch tokens</div>
-                        </div>
-                        <div className='option'>
-                            <div className='optionColoredDivs optionColorDiv2'></div>
-                            <div>Liquidity</div>
-                        </div>
-                        <div className='option'>
-                            <div className='optionColoredDivs optionColorDiv3'></div>
-                            <div className='optionsdiv'>
-                                <div>Staking Reward</div>
-                                <div className='unlockedTxt'>(Unlocked in April 2023)</div>
-                            </div>
-                        </div>
-                    </div>
-                <div className='gridCol'>
-                    <div className='option'>
-                            <div className='optionColoredDivs optionColorDiv4'></div>
-                            <div className='optionsdiv'>
-                                <div>CEX Listing Tokens</div>
-                                <div className='unlockedTxt'>(Unlocked in April 2023)</div>
-                            </div>
-                        </div>
-                        <div className='option'>
-                            <div className='optionColoredDivs optionColorDiv5'></div>
-                            <div className='optionsdiv'>
-                                <div>AI Development Reserve</div>
-                                <div className='unlockedTxt'>(Unlocked in June 2023)</div>
-                            </div>
-                        </div>
-                        <div className='option'>
-                            <div className='optionColoredDivs optionColorDiv6'></div>
-                            <div className='optionsdiv'>
-                                <div>Team</div>
-                                <div className='unlockedTxt'>(Unlocked in June 2023)</div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
             </div>
-            <img src={chart} alt="chart" />
+            {/* <img src={chart} alt="chart" /> */}
+            <div className="progress-bar">
+              <div className="progress-bar-container">
+                <CircularProgressBar
+                  percentage={23}
+                  circleWidth={"150"}
+                  color="#EF5410"
+                  className="loader"
+                />
+                <div>
+                  <h1>Liquidity</h1>
+                  <p></p>
+                </div>
+              </div>
+              <div className="progress-bar-container">
+                <CircularProgressBar
+                  percentage={10}
+                  circleWidth={"150"}
+                  color="#ff710a"
+                  className="loader"
+                />
+                <div>
+                  <h1>Staking Reward</h1>
+                  <p>
+                    {"("}Unlocked in April 2023{")"}
+                  </p>
+                </div>
+              </div>
+              <div className="progress-bar-container">
+                <CircularProgressBar
+                  percentage={10}
+                  circleWidth={"150"}
+                  color="#ff9d0a"
+                  className="loader"
+                />
+                <div>
+                  <h1>CEX Listing Tokens</h1>
+                  <p>
+                    {"("}Unlocked in June 2023{")"}
+                  </p>
+                </div>
+              </div>
+              <div className="progress-bar-container">
+                <CircularProgressBar
+                  percentage={10}
+                  circleWidth={"150"}
+                  color="#ffba0a"
+                  className="loader"
+                />
+                <div>
+                  <h1>Al Development Reserve</h1>
+                  <p>
+                    {"("}Unlocked in June 2023{")"}
+                  </p>
+                </div>
+              </div>
+              <div className="progress-bar-container">
+                <CircularProgressBar
+                  percentage={5}
+                  circleWidth={"150"}
+                  color="white"
+                  className="loader"
+                />
+                <div>
+                  <h1>Team</h1>
+                  <p>
+                    {"("}Unlocked in April 2023{")"}
+                  </p>
+                </div>
+              </div>
+              <div className="progress-bar-container">
+                <CircularProgressBar
+                  percentage={41}
+                  circleWidth={"150"}
+                  color="#d82d18"
+                  className="loader"
+                />
+                <div>
+                  <h1>Fair Launch Tokens</h1>
+                  <p></p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

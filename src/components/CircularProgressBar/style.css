@@ -1,0 +1,27 @@
+.circle-background{
+    fill: none;
+    stroke: #36363d;
+    stroke-width: 10;
+}
+.circle-progress{
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    
+}
+.show-animation{
+    animation: showLoad 2s ease-in-out forwards;
+}
+@keyframes showLoad{
+    0%{
+        stroke-dashoffset: var(--array);
+    }
+    100%{
+        stroke-dashoffset: var(--offset);
+    }
+}
+.circle-text{
+    font-size: 2rem;
+    font-family: "Montserrat";
+    font-weight: 600;
+}

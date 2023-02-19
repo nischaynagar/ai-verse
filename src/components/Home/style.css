@@ -247,9 +247,11 @@
 
 .tokenomicsWrapper{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
-    gap: 20px;
+    gap: 4rem;
     margin: 10em 0;
     max-width: 1300px;
 }
@@ -275,6 +277,7 @@
     font-weight: 700;
     font-size: 48px;
     line-height: 65px;
+    text-align: center;
 }
 
 .tokenomicsdescTxt{
@@ -703,4 +706,21 @@ b{
     100%{
         transform: translateY(0px);
     }
+}
+
+.progress-bar{
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    align-items: center;
+}
+.progress-bar-container{
+    display: grid;
+    grid-template-rows: 1fr 0.75fr;
+    align-items: center;
+    min-height: 250px;
+    text-align: center;
+}
+.progress-bar-container p{
+    color: #FFFFFFB0;
 }
