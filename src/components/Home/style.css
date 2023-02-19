@@ -9,12 +9,22 @@
     width: min(var(--max-width), 100% - (var(--container-padding) * 2));
     margin-inline: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 2em 4em 0em 4em;
     align-items: center;
     backdrop-filter: brightness(0.5);
+    animation: animate-mainWrapper1 1s ease-in-out;
 }
-
+@keyframes animate-mainWrapper1{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 .mainWrapper1 img{
     width: 50%;
     min-width: 450px;
@@ -46,14 +56,6 @@
     background: rgba(173, 96, 53, 0.46);
     filter: blur(200px);
     transform: matrix(-1, 0, 0, 1, 0, 0);
-}
-
-.backdropDiv1{
-    
-}
-
-.backdropDiv2{
-    
 }
 
 .titleContent{
@@ -120,12 +122,40 @@
 }
 
 .gradientTxt{
+    /* color: #ff700a42; */
+    --clr: #ff950050;
+    --clr2: #ff4400;
+    background-clip: text;  
+    background: var(--clr) -webkit-gradient(linear, left top, right top, from(var(--clr2)), to(var(--clr2)), color-stop(0.5, var(--clr2))) 0 0 no-repeat;
+    -webkit-background-clip: text;
+    background-size: 100px;
+    -webkit-background-size: 100px;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradientTxt 8s infinite;
+}
+@keyframes animate-gradientTxt{
+    0%{
+        background-position: -1000px;
+    }
+    20%{
+        background-position: top left;
+    }
+    50%{
+        background-position: top 50%;
+    }
+    80%{
+        background-position: top right;
+    }
+    100%{
+        background-position: 1000px;
+    }
+}
+/* .gradientTxt{
     background: linear-gradient(90deg, #D82C17 2.56%, #FF710A 92.24%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
-}
+} */
 
 .howItWorksSection{
     display: flex;
@@ -647,5 +677,30 @@ b{
     }
     .sparkleIcon5{
         display: none;
+    }
+}
+
+.faders{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.25s ease-in-out, transform 0.5s ease-in-out;
+}
+.faders.fade-in{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.float-img{
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0px);
     }
 }

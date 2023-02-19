@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import chart from "../assests/images/icon-chart.svg";
 import bnbIcon from "../assests/images/icon-bnb.svg";
 import pinksaleIcon from "../assests/images/icon-pinksale.svg";
@@ -23,6 +23,28 @@ import "react-alice-carousel/lib/alice-carousel.css";
 
 export default function Home() {
   const handleDragStart = (e) => e.preventDefault();
+  const options = {
+    threshold: 0,
+    rootMargin: "0px 0px -200px 0px",
+  };
+  useEffect(() => {
+    const faders = document.querySelectorAll(".faders");
+    const observers = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+        }
+      });
+    }, options);
+    faders.forEach((fader) => {
+      observers.observe(fader);
+    });
+    return () => {
+      faders.forEach((fader) => {
+        observers.unobserve(fader);
+      });
+    };
+  });
 
   const items = [
     <img
@@ -78,7 +100,7 @@ export default function Home() {
     <>
       <div className="backdropDiv1">
         <div className="eclipseDiv"></div>
-        <div id="home" className="mainWrapper1">
+        <div id="home" className="mainWrapper1 faders">
           <div className="titleContent">
             <div>
               <div className="titleName">AI VERSE</div>
@@ -95,13 +117,13 @@ export default function Home() {
             </div>
             <div className="btn1">Buy&nbsp;Token</div>
           </div>
-          <img src={aiImg1} alt="ai-img" />
+          <img src={aiImg1} alt="ai-img" className="float-img" />
           <img className="aiImg4" src={aiImg4} alt="ai-img" />
         </div>
       </div>
 
       <div className="backdropDiv2">
-        <div className="mainWrapper2">
+        <div className="mainWrapper2 faders">
           <div className="binanceDiv">
             <AliceCarousel
               items={items}
@@ -123,7 +145,7 @@ export default function Home() {
               buttonsDisabled
             />
           </div>
-          <div id="about" className="aboutWrapper">
+          <div id="about" className="aboutWrapper faders">
             <img src={aiImg2} alt="ai-img" />
             <div className="aboutDiv">
               <div>
@@ -145,7 +167,7 @@ export default function Home() {
               <img className="sparkleIcon4" src={sparkleIcon4} alt="sparkle" />
             </div>
           </div>
-          <div className="goalWrapper">
+          <div className="goalWrapper faders">
             {/* <div className='eclipseDiv'></div> */}
             <div>
               <img className="sparkleIcon5" src={sparkleIcon5} alt="sparkle" />
@@ -166,7 +188,7 @@ export default function Home() {
             </div>
             <img className="sparkleIcon2" src={sparkleIcon2} alt="sparkle" />
           </div>
-          <div id="tokenomics" className="tokenomicsWrapper">
+          <div id="tokenomics" className="tokenomicsWrapper faders">
             <div className="tokenomics">
               <div className="tokenomicsFeatures">
                 <div className="headingUnderlineWrapper">
