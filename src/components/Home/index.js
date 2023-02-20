@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import chart from "../assests/images/icon-chart.svg";
+// import chart from "../assests/images/icon-chart.svg";
 import bnbIcon from "../assests/images/icon-bnb.svg";
 import pinksaleIcon from "../assests/images/icon-pinksale.svg";
 import coinmarketcapIcon from "../assests/images/icon-coinmarketcap.svg";
@@ -10,11 +10,13 @@ import matrixlabsIcon from "../assests/images/icon-matrixlabs.svg";
 import aiImg1 from "../assests/images/icon-ai-img1.svg";
 import aiImg2 from "../assests/images/icon-ai-img2.svg";
 import aiImg4 from "../assests/images/icon-ai-img4.svg";
-import sparkleIcon1 from "../assests/images/icon-sparkle1.svg";
+// import sparkleIcon1 from "../assests/images/icon-sparkle1.svg";
 import sparkleIcon2 from "../assests/images/icon-sparkle2.svg";
 import sparkleIcon3 from "../assests/images/icon-sparkle3.svg";
 import sparkleIcon4 from "../assests/images/icon-sparkle4.svg";
 import sparkleIcon5 from "../assests/images/icon-sparkle5.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import "./style.css";
 
@@ -23,29 +25,32 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import CircularProgressBar from "../CircularProgressBar";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   const handleDragStart = (e) => e.preventDefault();
   const options = {
     threshold: 0,
     rootMargin: "0px 0px -200px 0px",
   };
-  useEffect(() => {
-    const faders = document.querySelectorAll(".faders");
-    const observers = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("fade-in");
-        }
-      });
-    }, options);
-    faders.forEach((fader) => {
-      observers.observe(fader);
-    });
-    return () => {
-      faders.forEach((fader) => {
-        observers.unobserve(fader);
-      });
-    };
-  });
+  // useEffect(() => {
+  //   const faders = document.querySelectorAll(".faders");
+  //   const observers = new IntersectionObserver((entries) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting) {
+  //         entry.target.classList.add("fade-in");
+  //       }
+  //     });
+  //   }, options);
+  //   faders.forEach((fader) => {
+  //     observers.observe(fader);
+  //   });
+  //   return () => {
+  //     faders.forEach((fader) => {
+  //       observers.unobserve(fader);
+  //     });
+  //   };
+  // });
 
   const items = [
     <img
@@ -101,7 +106,7 @@ export default function Home() {
     <>
       <div className="backdropDiv1">
         <div className="eclipseDiv"></div>
-        <div id="home" className="mainWrapper1 faders">
+        <div id="home" className="mainWrapper1 faders" data-aos="fade-up">
           <div className="titleContent">
             <div>
               <div className="titleName">AI VERSE</div>
@@ -146,7 +151,7 @@ export default function Home() {
               buttonsDisabled
             />
           </div>
-          <div id="about" className="aboutWrapper faders">
+          <div id="about" className="aboutWrapper faders" data-aos="fade-up">
             <img src={aiImg2} alt="ai-img" />
             <div className="aboutDiv">
               <div>
@@ -168,7 +173,7 @@ export default function Home() {
               <img className="sparkleIcon4" src={sparkleIcon4} alt="sparkle" />
             </div>
           </div>
-          <div className="goalWrapper faders">
+          <div className="goalWrapper faders" data-aos="fade-up">
             {/* <div className='eclipseDiv'></div> */}
             <div>
               <img className="sparkleIcon5" src={sparkleIcon5} alt="sparkle" />
@@ -189,7 +194,11 @@ export default function Home() {
             </div>
             <img className="sparkleIcon2" src={sparkleIcon2} alt="sparkle" />
           </div>
-          <div id="tokenomics" className="tokenomicsWrapper faders">
+          <div
+            id="tokenomics"
+            className="tokenomicsWrapper faders"
+            data-aos="fade-up"
+          >
             <div className="tokenomics">
               <div className="tokenomicsFeatures">
                 <div className="headingUnderlineWrapper">

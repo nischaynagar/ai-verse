@@ -13,9 +13,9 @@
     padding: 2em 4em 0em 4em;
     align-items: center;
     backdrop-filter: brightness(0.5);
-    animation: animate-mainWrapper1 1s ease-in-out;
+    /* animation: animate-mainWrapper1 1s ease-in-out; */
 }
-@keyframes animate-mainWrapper1{
+/* @keyframes animate-mainWrapper1{
     0%{
         opacity: 0;
         transform: translateY(100px);
@@ -24,7 +24,7 @@
         opacity: 1;
         transform: translateY(0px);
     }
-}
+} */
 .mainWrapper1 img{
     width: 50%;
     min-width: 450px;
@@ -683,7 +683,7 @@ b{
     }
 }
 
-.faders{
+/* .faders{
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 0.25s ease-in-out, transform 0.5s ease-in-out;
@@ -691,7 +691,7 @@ b{
 .faders.fade-in{
     opacity: 1;
     transform: translateY(0);
-}
+} */
 
 .float-img{
     animation: float 6s ease-in-out infinite;
