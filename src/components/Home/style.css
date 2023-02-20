@@ -366,7 +366,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -768,3 +767,6 @@ b{
         grid-template-rows: 1fr 0.25fr;
     }
 }
+
+.backdropDiv1>div{overflow-x: hidden;}
+.backdropDiv2>div{overflow-x: hidden;}

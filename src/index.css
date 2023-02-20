@@ -30,7 +30,7 @@
     height: 100%;
     font-family: 'Open Sans';
   }
-  body>div {overflow-x:hidden;}
+  /* body>div {overflow-x:hidden;} */
  
   /* Set core body defaults */
   body {

@@ -29,10 +29,10 @@ export default function Home() {
     AOS.init({ duration: 2000 });
   }, []);
   const handleDragStart = (e) => e.preventDefault();
-  const options = {
-    threshold: 0,
-    rootMargin: "0px 0px -200px 0px",
-  };
+  // const options = {
+  //   threshold: 0,
+  //   rootMargin: "0px 0px -200px 0px",
+  // };
   // useEffect(() => {
   //   const faders = document.querySelectorAll(".faders");
   //   const observers = new IntersectionObserver((entries) => {
@@ -135,7 +135,7 @@ export default function Home() {
               items={items}
               responsive={responsive}
               autoPlay
-              autoPlayInterval={2000}
+              autoPlayInterval={1000}
               animationDuration={1000}
               disableButtonsControls
               disableDotsControls
