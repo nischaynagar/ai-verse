@@ -3,6 +3,7 @@ import "./style.css";
 import { ReactComponent as Menu } from "../assests/images/icon-hamburger.svg";
 import { ReactComponent as CloseIcon } from "../assests/images/icon-close.svg";
 import Logo from "../assests/images/Logo.svg";
+import whitepaper from "../assests/whitepaper.pdf";
 
 export default function Navbar(props) {
   const [menu, setmenu] = useState(false);
@@ -100,6 +101,11 @@ export default function Navbar(props) {
                     onClick={(e) => handleClick(e, "tokenomics")}
                   >
                     Tokenomics
+                  </a>
+                </li>
+                <li>
+                  <a download href={whitepaper}>
+                    WhitePaper
                   </a>
                 </li>
                 <li className="toggleDisplay">
