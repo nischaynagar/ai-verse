@@ -153,7 +153,7 @@ export default function Home() {
             />
           </div>
           <div id="about" className="aboutWrapper faders" data-aos="fade-up">
-            <img src={aiImg2} alt="ai-img" />
+            <img className="float-img" src={aiImg2} alt="ai-img" />
             <div className="aboutDiv">
               <div>
                 <div className="aboutTitle">About us</div>
