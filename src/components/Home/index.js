@@ -204,33 +204,30 @@ export default function Home() {
             <div className="tokenomics">
               <div className="tokenomicsFeatures">
                 <div className="headingUnderlineWrapper">
+                  <div className="tokenomicsTitle">Token name: Alverse</div>
                   <div className="tokenomicsTxt">Tokenomics</div>
                 </div>
                 <div className="tokenomics-boxes">
                   <div className="tokenomics-box">
-                    <div className="tokenomicsheadingUnderlineWrapper">
-                     <div>Token&nbsp;name:&nbsp;&nbsp;</div><div className="tokenomicsTitle">AIverse</div>
-                    </div>
+                      <p>Ticker Symbol</p>
+                      <h1>$AIV</h1>
                   </div>
                   <div className="tokenomics-box">
-                    <ul className="tokenomics-list">
-                    <li>Ticker Symbol: $AIV</li>
-                    <li>Blockchain: Binance Smart Chain (BEP-20)</li>
-                    <li>Total Supply: 100 Million (100,000,000)</li>
-                    <li>Token tax: 0% Tax</li>
-                    </ul>
+                  <p>Blockchain</p>
+                    <h1>Binance Smart Chain (BEP-20)</h1>
+                  </div>
+                  <div className="tokenomics-box">
+                    <p>Total Supply </p>
+                    <h1>100 Million (100,000,000)</h1>
+                  </div>
+                  <div className="tokenomics-box">
+                    <p>Token tax</p>
+                    <h1>0% Tax</h1>
                   </div>
                 </div>
-                {/* <img
-                  className="sparkleIcon1"
-                  src={sparkleIcon1}
-                  alt="sparkle"
-                /> */}
               </div>
             </div>
-            {/* <img src={chart} alt="chart" /> */}
             <div className="progress-bar">
-              <div className="progressbarContainer">
 
               <div className="progress-bar-container">
                 <div className="loader">
@@ -277,8 +274,6 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              </div>
-              <div className="progressbarContainer">
 
               <div className="progress-bar-container">
                 <div className="loader">
@@ -325,7 +320,6 @@ export default function Home() {
                   <h1>Fair Launch Tokens</h1>
                   <p></p>
                 </div>
-              </div>
               </div>
 
             </div>
