@@ -104,7 +104,7 @@ export default function Navbar(props) {
                   </a>
                 </li>
                 <li>
-                  <a download href={whitepaper}>
+                  <a download={"whitepaper"} href={whitepaper}>
                     WhitePaper
                   </a>
                 </li>

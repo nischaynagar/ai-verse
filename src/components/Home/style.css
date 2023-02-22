@@ -238,22 +238,13 @@
     margin-top: 5px;
 }
 
-/* .tokenomics{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    max-width: 600px;
-} */
 
 .tokenomicsWrapper{
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
     width: 100%;
     gap: 4rem;
-    margin: 10em 0;
-    max-width: 1300px;
+    margin: 15em 0 5em 0;
 }
 
 .tokenomicsWrapper img{
@@ -261,6 +252,10 @@
     width: 40%;
     max-width: 500px;
     min-width: 250px;
+}
+
+.progressbarContainer{
+    display: flex;
 }
 
 /* .tokenomicsFeatures{
@@ -276,8 +271,19 @@
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
-    line-height: 65px;
-    text-align: center;
+    line-height: 55px;
+}
+
+.tokenomicsTitle{
+    background: linear-gradient(90deg, #D82C17 2.56%, #FF710A 92.24%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .tokenomicsdescTxt{
@@ -285,6 +291,125 @@
     max-width: 477px;
     color: rgba(255, 255, 255, 0.79);
 }
+
+.roadmap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    margin-top: 10em;
+}
+
+.roadmapHeadingWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.roadmapHeading{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+}
+
+.roadmapImg{
+    width: 250px;
+}
+
+.stageLeft{
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50%;
+    transform: translate(120px, -50px);
+}
+
+.stageRight{
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 25%;
+    justify-content: center;
+    transform: translateX(-100px);
+}
+
+.stageList{
+    list-style-type: disc;
+}
+
+.stageWrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.stageTitle1{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #FF005B;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+.stageTitle2{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #FF2BD0;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+.stageTitle3{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #A839FF;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+.stageTitle4{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #6934FF;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+.stageList li{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.stage1{
+    transform: translateY(60px);
+}
+
+.stage3{
+    transform: translateY(10px);
+}
+
+.stage4{
+    transform: translateY(-60px);
+}
+
+
+
 
 .optionsGrid{
     display: flex;
@@ -407,7 +532,7 @@
     align-items: center;
     justify-content: center;
     gap: 50px;
-    margin-bottom: 5em;
+    margin-top: 5em;
 }
 
 .goalWrapper{
@@ -541,7 +666,50 @@ b{
     margin-top: 10px;
 }
 
-@media only screen and (max-width: 800px) {
+.sparkleCirclebg1{
+    width: 500px;
+    height: 500px;
+    background: rgba(117, 59, 66, 0.2);
+    filter: blur(100px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    border-radius: 100%;
+    position: absolute;
+    transform: translate(-250px, 350px);
+}
+.sparkleCirclebg2{
+    width: 500px;
+    height: 500px;
+    background: rgba(173, 96, 53, 0.28);
+    filter: blur(150px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    border-radius: 100%;
+    position: absolute;
+    transform: translate(60px, 150px);
+}
+.sparkleCirclebg3{
+    width: 500px;
+    height: 500px;
+    background: rgba(173, 96, 53, 0.28);
+    filter: blur(150px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    border-radius: 100%;
+    position: absolute;
+    transform: translate(350px, 400px);
+}
+
+.sparkleCirclebg4{
+    width: 500px;
+    height: 500px;
+    background: rgba(173, 96, 53, 0.62);
+    filter: blur(300px);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    border-radius: 100%;
+    position: absolute;
+    transform: translate(150px, -200px);
+}
+
+
+@media only screen and (max-width: 1020px) {
     .mainWrapper1{
         padding: 5px 20px;
         flex-direction: column;
@@ -569,13 +737,30 @@ b{
         flex-direction: column;
         gap: 5em;
     }
+    .tokenomics{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .tokenomics-boxes{
+        width: 100%;
+        align-items: center;
+    }
     .tokenomicsWrapper{
         display: flex;
         flex-direction: column;
-        margin: 100px 0 8em 0;
+        margin: 100px 0 0 0;
         gap: 40px;
     }
+    .tokenomicsTitle{
+        text-align: left;
+    }
+    .tokenomicsFeatures{
+        width: 100%;
+    }
     .tokenomicsTxt{
+        text-align: left;
         font-size: 1.75rem;
         line-height: 40px;
     }
@@ -592,6 +777,22 @@ b{
         background: none;
         padding: 0;
         backdrop-filter: none;
+    }
+    .stageLeft {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 25%;
+    }
+    .roadmapImg{
+        width: 200px;
+    }
+    .stage4 {
+        transform: translateY(-10px);
+    }
+    .stageList li{
+        font-size: 9px;
+        line-height: 12px;
     }
     .optionColoredDivs{
         width: 15px;
@@ -648,11 +849,8 @@ b{
         margin: 5em 0;
         gap: 35px;
         margin-bottom: 5em;
+        height: 100px;
     }
-
-      /* .binanceDiv img{
-        max-width: 150px;
-      } */
     .carousel-item {
     margin: 0 5px;
     }
@@ -679,6 +877,20 @@ b{
     }
     .sparkleIcon5{
         display: none;
+    }
+    .roadmap{
+        align-items: start;
+        gap: 50px;
+        margin: 10em 0;
+    }
+    .roadmapHeading{
+        text-align: left;
+        font-size: 1.75rem;
+        line-height: 40px;
+    }
+    .stageWrapper{
+        width: 480px;
+        align-self: center;
     }
 }
 
@@ -712,6 +924,7 @@ b{
     gap: .5rem;
     flex: 1;
     align-items: center;
+    flex-direction: column;
 }
 .progress-bar-container{
     display: grid;
@@ -723,6 +936,7 @@ b{
 }
 .progress-bar-container p{
     color: #FFFFFFB0;
+    font-size: 10px;
 }
 .loader{
     margin: 0 auto;
@@ -730,34 +944,50 @@ b{
 .tokenomics-boxes{
     margin-top: 3rem;
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
     gap: 2rem;
 }
 .tokenomics-box{
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.23) 0%, rgba(255, 255, 255, 0.08) 100%, rgba(255, 255, 255, 0.08) 100%);
-    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%, rgba(255, 255, 255, 0.08) 100%);
+    border-radius: 15px;
     display: flex;
     font-family: 'Montserrat';
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0.5em 2em;
-    width: 200px;
-    height: 150px;
+    padding: 1.25em 2em;
+    width: 300px;
     color: #FFFFFFB8;
+    font-size: 14px;
+    line-height: 20px;
 }
+
 .tokenomics-box h1{
     font-weight: 600;
 }
 
-@media only screen and (max-width: 800px) {
+.tokenomicsheadingUnderlineWrapper{
+    display: flex;
+    align-items: center;
+}
+
+.tokenomics-list{
+    list-style-type: disc;
+    padding-left: 10px;
+}
+
+.tokenomics-list li{
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 1120px) {
     .tokenomics-boxes{
         flex-direction: column;
         gap: 1rem;
-    }
-    .tokenomics-box{
-        width: 100%;
+        align-items: center;
     }
     .progress-bar{
         flex-direction: column;
@@ -770,3 +1000,11 @@ b{
 
 .backdropDiv1>div{overflow-x: hidden;}
 .backdropDiv2>div{overflow-x: hidden;}
+
+
+@media only screen and (max-width: 600px)
+{
+    .progressbarContainer{
+        flex-direction: column;
+    }
+} 

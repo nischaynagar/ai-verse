@@ -15,6 +15,7 @@ import sparkleIcon2 from "../assests/images/icon-sparkle2.svg";
 import sparkleIcon3 from "../assests/images/icon-sparkle3.svg";
 import sparkleIcon4 from "../assests/images/icon-sparkle4.svg";
 import sparkleIcon5 from "../assests/images/icon-sparkle5.svg";
+import roadmapImg from "../assests/images/icon-roadmap.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -179,6 +180,7 @@ export default function Home() {
               <img className="sparkleIcon5" src={sparkleIcon5} alt="sparkle" />
               <img className="sparkleIcon3" src={sparkleIcon3} alt="sparkle" />
               <div className="aboutTitle">The goal is to</div>
+              <div className="sparkleCirclebg4"></div>
               <div className="aboutMainTxtheading">
                 Implement a machine learning platform
               </div>
@@ -206,20 +208,17 @@ export default function Home() {
                 </div>
                 <div className="tokenomics-boxes">
                   <div className="tokenomics-box">
-                    <p>Ticker Symbol</p>
-                    <h1>$AIV</h1>
+                    <div className="tokenomicsheadingUnderlineWrapper">
+                     <div>Token&nbsp;name:&nbsp;&nbsp;</div><div className="tokenomicsTitle">AIverse</div>
+                    </div>
                   </div>
                   <div className="tokenomics-box">
-                    <p>Blockchain</p>
-                    <h1>Binance Smart Chain (BEP-20)</h1>
-                  </div>
-                  <div className="tokenomics-box">
-                    <p>Total Supply </p>
-                    <h1>100 Million (100,000,000)</h1>
-                  </div>
-                  <div className="tokenomics-box">
-                    <p>Token tax</p>
-                    <h1>0% Tax</h1>
+                    <ul className="tokenomics-list">
+                    <li>Ticker Symbol: $AIV</li>
+                    <li>Blockchain: Binance Smart Chain (BEP-20)</li>
+                    <li>Total Supply: 100 Million (100,000,000)</li>
+                    <li>Token tax: 0% Tax</li>
+                    </ul>
                   </div>
                 </div>
                 {/* <img
@@ -231,6 +230,8 @@ export default function Home() {
             </div>
             {/* <img src={chart} alt="chart" /> */}
             <div className="progress-bar">
+              <div className="progressbarContainer">
+
               <div className="progress-bar-container">
                 <div className="loader">
                   <CircularProgressBar
@@ -276,6 +277,9 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+              </div>
+              <div className="progressbarContainer">
+
               <div className="progress-bar-container">
                 <div className="loader">
                   <CircularProgressBar
@@ -322,7 +326,50 @@ export default function Home() {
                   <p></p>
                 </div>
               </div>
+              </div>
+
             </div>
+            <div className="sparkleCirclebg3"> </div>
+          </div>
+          <div className="roadmap" data-aos="fade-up">
+            <div className="roadmapHeadingWrapper">
+                <div className="roadmapHeading">Roadmap</div>
+                <div className="styledUnderline"></div>
+              </div>
+              <div className="stageWrapper">
+
+              <div className="stageLeft">
+              <div className="sparkleCirclebg1"> </div>
+              <div className="stage1">
+                    <ul className="stageList">
+                      <li>PR work for AI verse</li>
+                      <li>Strategic sponsorships</li>
+                      <li>Capital unions</li>
+                      <li> More exchange listings</li>
+                    </ul>
+                </div>
+              
+              </div>
+              <img className="roadmapImg" src={roadmapImg} alt="roadmapImg"/>
+              <div className="stageRight">
+              <div className="stage2">
+                    <ul className="stageList">
+                      <li>Creation of AI Verse</li>
+                      <li>Pinksale presale global marketing and asian market</li>
+                      <li>CMC and CG listing</li>
+                    </ul>
+                </div>
+                <div className="stage3">
+                    <ul className="stageList">
+                      <li>AI Verse site update</li>
+                      <li>AI Verse NFT market</li>
+                      <li>1-25 CEX listing</li>
+                      <li>Roadmap improvements</li>
+                    </ul>
+                </div>
+                <div className="sparkleCirclebg2"> </div>
+                </div>
+              </div>
           </div>
         </div>
       </div>

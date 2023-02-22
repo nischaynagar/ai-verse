@@ -19,10 +19,10 @@ export default function Footer() {
         </a>
         <div className="iconWrapper">
           <div className="socialIcons">
-            <a href="https://twitter.com/AIverseToken">
+            <a href="https://twitter.com/AIverseToken" target="_blank"  rel="noopener noreferrer">
               <img src={twitterIcon} alt="twitter-icon" />
             </a>
-            <a href="https://t.me/AIverse_global">
+            <a href="https://t.me/AIverse_global" target="_blank"  rel="noopener noreferrer">
               <img src={telegramIcon} alt="telegram-icon" />
             </a>
           </div>
