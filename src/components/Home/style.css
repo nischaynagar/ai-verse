@@ -123,15 +123,16 @@
 
 .gradientTxt{
     /* color: #ff700a42; */
-    --clr: #ff950050;
-    --clr2: #ff4400;
+    --clr: rgba(216, 45, 24, 0.44);
+    --clr2: rgba(216, 44, 23, 1);
+    --clr3: white;
     background-clip: text;  
-    background: var(--clr) -webkit-gradient(linear, left top, right top, from(var(--clr2)), to(var(--clr2)), color-stop(0.5, var(--clr2))) 0 0 no-repeat;
+    background: var(--clr) linear-gradient(90deg, #4B221D -7.54%, #D82C17 23.72%, #FF710A 63.74%, #4B221D 96.64%) 0 0 no-repeat;
     -webkit-background-clip: text;
     background-size: 100px;
     -webkit-background-size: 100px;
     -webkit-text-fill-color: transparent;
-    animation: animate-gradientTxt 8s infinite;
+    animation: animate-gradientTxt 5s infinite;
 }
 @keyframes animate-gradientTxt{
     0%{
