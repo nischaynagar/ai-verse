@@ -9,7 +9,7 @@
     width: min(var(--max-width), 100% - (var(--container-padding) * 2));
     margin-inline: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 2em 4em 0em 4em;
     align-items: center;
     backdrop-filter: brightness(0.5);
@@ -89,7 +89,6 @@
 }
 
 .btn1{
-    background: linear-gradient(90deg, #D82C17 2.56%, #FF710A 92.24%);
     border-radius: 10px;
     padding: 12px 50px;
     width: fit-content;
@@ -99,11 +98,15 @@
     font-size: 17px;
     line-height: 25px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-image: linear-gradient(75deg, rgba(216, 44, 23, 1), rgba(255, 113, 10, 1),  #f12711, #f12711); 
+    background-size: 300% ;
+    /* background-position: left; */
+    
+    transition: 300ms background-position ease-in-out;
 }
 
 .btn1:hover{
-    background: linear-gradient(90deg, #FF710A 2.56%, #D82C17 96.94%);
+    background-position: right; 
 }
 
 .btn2{
