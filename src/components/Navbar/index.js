@@ -109,11 +109,16 @@ export default function Navbar(props) {
                   </a>
                 </li>
                 <li className="toggleDisplay">
-                  <div className="button">Dapp</div>
+                  <div className="button" onClick={() => props.setDapp(true)}>
+                    Dapp
+                  </div>
                 </li>
               </ul>
             </nav>
-            <div className="button display-sm-hidden display-md-inline-flex">
+            <div
+              className="button display-sm-hidden display-md-inline-flex"
+              onClick={() => props.setDapp(true)}
+            >
               Dapp
             </div>
           </div>

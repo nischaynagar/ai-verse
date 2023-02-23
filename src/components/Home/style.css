@@ -1023,3 +1023,46 @@ b{
         flex-direction: column;
     }
 } 
+
+.coming-soon-container{
+    z-index: 1000;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000DE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coming-soon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3em 6em;
+    background-color: #161616;
+    border-radius: 20px;
+}
+.coming-soon p{
+    background: linear-gradient(90deg, #D82C17 2.56%, #FF710A 92.24%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+}
+.icon-store{
+    display: flex;
+    gap: 2rem;
+}
+@media (max-width: 600px){
+    .coming-soon{
+        padding: 3em 2em;
+        margin: 0 1rem;
+    }
+}

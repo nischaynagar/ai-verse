@@ -16,6 +16,8 @@ import sparkleIcon3 from "../assests/images/icon-sparkle3.svg";
 import sparkleIcon4 from "../assests/images/icon-sparkle4.svg";
 import sparkleIcon5 from "../assests/images/icon-sparkle5.svg";
 import roadmapImg from "../assests/images/icon-roadmap.svg";
+import playstore from "../assests/images/playstore.svg";
+import appstore from "../assests/images/app-store.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -25,7 +27,7 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import CircularProgressBar from "../CircularProgressBar";
 
-export default function Home() {
+export default function Home({ dapp, setDapp }) {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
@@ -209,11 +211,11 @@ export default function Home() {
                 </div>
                 <div className="tokenomics-boxes">
                   <div className="tokenomics-box">
-                      <p>Ticker Symbol</p>
-                      <h1>$AIV</h1>
+                    <p>Ticker Symbol</p>
+                    <h1>$AIV</h1>
                   </div>
                   <div className="tokenomics-box">
-                  <p>Blockchain</p>
+                    <p>Blockchain</p>
                     <h1>Binance Smart Chain (BEP-20)</h1>
                   </div>
                   <div className="tokenomics-box">
@@ -228,7 +230,6 @@ export default function Home() {
               </div>
             </div>
             <div className="progress-bar">
-
               <div className="progress-bar-container">
                 <div className="loader">
                   <CircularProgressBar
@@ -321,52 +322,65 @@ export default function Home() {
                   <p></p>
                 </div>
               </div>
-
             </div>
             <div className="sparkleCirclebg3"> </div>
           </div>
           <div className="roadmap" data-aos="fade-up">
             <div className="roadmapHeadingWrapper">
-                <div className="roadmapHeading">Roadmap</div>
-                <div className="styledUnderline"></div>
-              </div>
-              <div className="stageWrapper">
-
+              <div className="roadmapHeading">Roadmap</div>
+              <div className="styledUnderline"></div>
+            </div>
+            <div className="stageWrapper">
               <div className="stageLeft">
-              <div className="sparkleCirclebg1"> </div>
-              <div className="stage1">
-                    <ul className="stageList">
-                      <li>PR work for AI verse</li>
-                      <li>Strategic sponsorships</li>
-                      <li>Capital unions</li>
-                      <li> More exchange listings</li>
-                    </ul>
+                <div className="sparkleCirclebg1"> </div>
+                <div className="stage1">
+                  <ul className="stageList">
+                    <li>PR work for AI verse</li>
+                    <li>Strategic sponsorships</li>
+                    <li>Capital unions</li>
+                    <li> More exchange listings</li>
+                  </ul>
                 </div>
-              
               </div>
-              <img className="roadmapImg" src={roadmapImg} alt="roadmapImg"/>
+              <img className="roadmapImg" src={roadmapImg} alt="roadmapImg" />
               <div className="stageRight">
-              <div className="stage2">
-                    <ul className="stageList">
-                      <li>Creation of AI Verse</li>
-                      <li>Pinksale presale global marketing and asian market</li>
-                      <li>CMC and CG listing</li>
-                    </ul>
+                <div className="stage2">
+                  <ul className="stageList">
+                    <li>Creation of AI Verse</li>
+                    <li>Pinksale presale global marketing and asian market</li>
+                    <li>CMC and CG listing</li>
+                  </ul>
                 </div>
                 <div className="stage3">
-                    <ul className="stageList">
-                      <li>AI Verse site update</li>
-                      <li>AI Verse NFT market</li>
-                      <li>1-25 CEX listing</li>
-                      <li>Roadmap improvements</li>
-                    </ul>
+                  <ul className="stageList">
+                    <li>AI Verse site update</li>
+                    <li>AI Verse NFT market</li>
+                    <li>1-25 CEX listing</li>
+                    <li>Roadmap improvements</li>
+                  </ul>
                 </div>
                 <div className="sparkleCirclebg2"> </div>
-                </div>
               </div>
+            </div>
           </div>
         </div>
       </div>
+      {dapp && (
+        <div
+          className="coming-soon-container"
+          onClick={() => {
+            setDapp(false);
+          }}
+        >
+          <div className="coming-soon">
+            <p>Coming Soon On</p>
+            <div className="icon-store">
+              <img src={appstore} alt="" />
+              <img src={playstore} alt="" />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
