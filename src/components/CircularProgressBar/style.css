@@ -7,19 +7,9 @@
     fill: none;
     stroke-width: 10;
     stroke-linecap: round;
-    
+    stroke-dashoffset: var(--offset);
 }
-.show-animation{
-    animation: showLoad 2s ease-in-out forwards;
-}
-@keyframes showLoad{
-    0%{
-        stroke-dashoffset: var(--array);
-    }
-    100%{
-        stroke-dashoffset: var(--offset);
-    }
-}
+
 .circle-text{
     font-size: 2rem;
     font-family: "Montserrat";
